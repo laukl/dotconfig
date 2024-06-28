@@ -1,6 +1,5 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
 		local nvimtree = require("nvim-tree")
 
@@ -13,6 +12,16 @@ return {
 			},
 			update_focused_file = {
 				enable = true,
+			},
+			renderer = {
+				icons = {
+					show = {
+						git = false,
+						file = false,
+						folder = false,
+						folder_arrow = false,
+					},
+				},
 			},
 		})
 
