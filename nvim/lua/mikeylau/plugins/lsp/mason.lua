@@ -25,6 +25,7 @@ return {
 				"pyright",
 				"jdtls",
 				"clangd",
+				"rust-analyzer",
 			},
 		})
 
