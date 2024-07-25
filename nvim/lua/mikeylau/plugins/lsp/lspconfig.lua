@@ -73,6 +73,19 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["helm_ls"] = function()
+				lspconfig.helm_ls.setup({
+					capabilities = capabilities,
+					filetypes = { "helm", "yaml", "tpl" },
+					settings = {
+						["helm-ls"] = {
+							yamlls = {
+								path = "yaml-language-server",
+							},
+						},
+					},
+				})
+			end,
 		})
 	end,
 }
