@@ -5,9 +5,12 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
+		"kcl-lang/kcl.nvim",
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
+		local server_configs = require("lspconfig.configs")
+		local util = require("lspconfig.util")
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -73,19 +76,16 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["helm_ls"] = function()
-				lspconfig.helm_ls.setup({
-					capabilities = capabilities,
-					filetypes = { "helm", "yaml", "tpl" },
-					settings = {
-						["helm-ls"] = {
-							yamlls = {
-								path = "yaml-language-server",
-							},
-						},
-					},
-				})
-			end,
+		})
+
+		server_configs.kcl = {
+			default_config = {},
+		}
+
+		lspconfig.kcl.setup({
+			cmd = { "kcl-language-server" },
+			filetypes = { "kcl" },
+			root_dir = util.root_pattern(".git"),
 		})
 	end,
 }
