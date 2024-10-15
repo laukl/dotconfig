@@ -87,5 +87,10 @@ return {
 			filetypes = { "kcl" },
 			root_dir = util.root_pattern(".git"),
 		})
+
+		lspconfig.jinja_lsp.setup({
+			cmd = { "jinja-lsp" },
+			filetypes = { "jinja" },
+		})
 	end,
 }
