@@ -3,7 +3,6 @@ vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt
 
 opt.autoread = true
-opt.relativenumber = true
 opt.number = true
 
 opt.tabstop = 2

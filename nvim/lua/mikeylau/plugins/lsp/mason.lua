@@ -22,9 +22,6 @@ return {
 				"lua_ls",
 				"graphql",
 				"prismals",
-				"pyright",
-				"jdtls",
-				"clangd",
 				"helm_ls",
 			},
 		})
@@ -33,12 +30,8 @@ return {
 			ensure_installed = {
 				"prettier",
 				"stylua",
-				"isort",
-				"black",
-				"pylint",
 				"tflint",
 				"tfsec",
-				"hadolint",
 			},
 		})
 	end,
