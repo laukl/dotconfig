@@ -8,4 +8,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ls="eza -l"
 alias psql="docker run -it --rm alpine/psql"
 
+export OPENAI_API_KEY="$(cat ~/.config/.openaikey)"
+
 neofetch
