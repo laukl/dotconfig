@@ -9,8 +9,6 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
-		local server_configs = require("lspconfig.configs")
-		local util = require("lspconfig.util")
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -76,16 +74,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-		})
-
-		server_configs.kcl = {
-			default_config = {},
-		}
-
-		lspconfig.kcl.setup({
-			cmd = { "kcl-language-server" },
-			filetypes = { "kcl" },
-			root_dir = util.root_pattern(".git"),
 		})
 	end,
 }
