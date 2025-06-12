@@ -27,3 +27,6 @@ opt.clipboard:append("unnamedplus")
 
 opt.splitright = true
 opt.splitbelow = true
+
+opt.grepprg = "rg --vimgrep"
+opt.grepformat = "%f:%l:%c:%m"
