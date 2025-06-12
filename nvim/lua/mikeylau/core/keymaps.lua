@@ -13,3 +13,5 @@ vim.keymap.set("n", "<leader>fg", function()
 		vim.cmd("copen")
 	end
 end, { desc = "ripgrep" })
+
+vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { noremap = true, silent = true, desc = "Code Action" })
